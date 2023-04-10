@@ -34,7 +34,7 @@ class Solution{
     pair<pair<int, int>, pair<int, int>> nextState(pair<int, int>& pr) {
         int d = itr % 4;
         if(randoms[itr] > 0.8 && randoms[itr] <= 0.9) {
-            return {{pr.first + opposite(dir[d].first), pr.second + opposite(dir[d].second)}, {opposite(dir[d].first), opposite(dir[d].second)}};
+            return {{pr.first + opposite(dir[d].second), pr.second + opposite(dir[d].first)}, {opposite(dir[d].second), opposite(dir[d].first)}};
         }
         else if(randoms[itr++] > 0.9) {
             return {{pr.first + dir[d].second, pr.second + dir[d].first}, {dir[d].second, dir[d].first}};
